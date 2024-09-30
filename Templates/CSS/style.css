@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
     color: #fff;
+   
 }
 
 ul li {
@@ -46,13 +47,15 @@ a {
 .navbar-container{
     width: 20%;
     height: fit-content;
-    background-color: blue;
+    background-color: rgb(102, 102, 218);
     margin: auto;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 0.75rem;
+    padding: 7px;
+    
 }
 
 .navbar-container ul {
