@@ -1,14 +1,21 @@
 /* ---------------- Global Classes ---------------- */
+:root {
+    --background-color: #1a1a3b; 
+    --button-color: #2ecc71; 
+    --box-color: rgba(173, 216, 230, 0.3); 
+    --text-color: #fff; 
+    --secondary-text-color:#b2b2b2 ; 
+}
 
 html,
 body {
     margin: 0%;
     box-sizing: border-box;
     overflow-x: hidden;
-    color: #fff;
-   background-color: black;
-   height: 100vh;
-   overflow: hidden;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    height: 100vh;
+    overflow: hidden;
 }
 
 ul li {
@@ -17,7 +24,17 @@ ul li {
 
 a {
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--text-color);
+}
+
+button{
+    background: var(--button-color);
+    border: none;
+    border-radius: 0.75rem;
+    padding: 1.10rem;
+    width: 15%;
+    cursor: pointer;
+    color: var(--text-color);
 }
 
 
@@ -44,14 +61,15 @@ a {
 }
 
 
-
 /* --------X-------- Global Classes --------X-------- */
 
 
+
+/* ---------------- Navbar ---------------- */
 .navbar-container{
     width: 20%;
     height: fit-content;
-    background-color: rgb(102, 102, 218);
+    background-color: var(--box-color);
     margin: auto;
     position: absolute;
     bottom: 0;
@@ -75,79 +93,149 @@ a {
     padding: 0.5rem 0;
 }
 
+/* --------X-------- Navbar --------X-------- */
+
+
+/* ---------------- Input ---------------- */
+input {
+    padding: 10px;
+    border-radius: 4px; 
+    outline: none; 
+    background-color: var(--box-color);
+    color: var(--text-color);
+    border: 1px solid var(--box-color); 
+}
+
+input:focus {
+    outline: none; 
+    border-color:var(--box-color); 
+    box-shadow: none; 
+}
+
+input::placeholder {
+    color: var(--secondary-text-color); 
+    font-style: italic; 
+    opacity: 1; 
+}
+
+
+/* --------X-------- Input --------X-------- */
+
+
+
+/* ---------------- ScrollBar ---------------- */
+
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
+}
+::-webkit-scrollbar-track {
+    background: var(--box-color);
+    border-radius: 5px; 
+}
+::-webkit-scrollbar-thumb {
+    background: var(--box-color); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--background-color); 
+}
+
+/* --------X-------- Scrollbar --------X-------- */
+
+
+
+/* ---------------- Toogle ---------------- */
+.toggle i{
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease; 
+    width: 1rem;
+    height: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.toggle-roted{
+    transform: rotate(90deg) !important;
+}
+.toggle-show {
+    display: none;
+    margin-top: 10px;
+}
+
+.toggle {
+    cursor: pointer;
+    background-color: var(--box-color);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.toggle:hover {
+    background-color: var(--button-color);
+}
+/* --------X-------- Toogle --------X-------- */
 
 
 
 
-
-/* Main  */
-
-
-
+/* ======================= MainPage ======================= */
 .main-left, .main-map{
     width: 48%;
 }
-.main-left{
-    overflow-y: auto;      /* Add vertical scrollbar if needed */
-    overflow-x: hidden;  
-    height: 100vh;  
-}
-
-
-
+/* ---------------- Right Side Canvas ---------------- */
 
 #canvasOne{
     width: 100%;
     max-width: 700px;
     height: 100vh;
     border-radius: 1rem;
-
 }
 
+/* --------X-------- Right Side Canvas --------X-------- */
 
+
+/* ---------------- Left Side All ---------------- */
+.main-left{
+    overflow-y: auto;     
+    overflow-x: hidden;  
+    height: 100vh;  
+}
+.prediction{
+    width: 95%;
+}
 
 .input-group input{
     width: 75%;
     padding: 1rem;
     margin: 1rem 0 ;
 }
-.input-group button{
-    width: 15%;
-    padding: 1rem;
+
+
+
+
+.predict-img{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.predict-img img{
+    width: 100%;
 }
 
-
-
-
-.toggle-show {
-    display: none; /* Hide the content initially */
-    margin-top: 10px;
+.share-predict ul li{
+    margin: 1rem;
 }
-
-.toggle {
-    cursor: pointer;
-    background-color: #ff0000;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
+.share-predict ul {
+    padding: 0;
+    font-size: 1.5rem;
 }
-
-.toggle:hover {
-    background-color: #e0e0e0;
-}
-
-
-
-
 .email-number-box div{
     width: 40%;
-    background-color: blue;
+    background-color: var(--box-color);
     margin: 1rem 0;
     padding: 1rem;
     text-align: center;
+    border-radius: 0.5rem;
 }
-
 .subscribe input{
     width: 90%;
     padding: 1rem;
@@ -159,15 +247,43 @@ a {
 }
 
 
-.predict-img{
-    width: 90%;
-    overflow: hidden;
-    text-align: center;
-}
-.predict-img img{
-    width: 100%;
-}
 
-.share-predict ul li{
-    margin: 1rem;
-}
+
+
+/* --------X-------- Left Side All --------X-------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
