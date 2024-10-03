@@ -42,7 +42,7 @@ def preprocess_nasa_power_data(lat, lon, date, data):
 # Function to load and test the model
 def test_model(test_data):
     print("Loading the trained model...")
-    model_path = r'C:\Users\Md Raiyan\Desktop\nasa_data_fetch\best_model_tuned.pkl'
+    model_path = r'FlameWatch\ml\best_model_tuned.pkl'
     model = joblib.load(model_path)
     
     print("Testing the model...")
@@ -73,4 +73,3 @@ def main():
 
 if __name__ == "__main__":
     main()
--14.88801-14.88801-4.274551291887413

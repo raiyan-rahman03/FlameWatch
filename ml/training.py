@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 # Load the dataset
 print("Loading dataset...")
-dataset_path = r'C:\Users\Md Raiyan\Desktop\nasa_data_fetch\wildfire_final_dataset.csv'  # Your merged CSV file path
+dataset_path = r'FlameWatch\ml\wildfire_final_dataset.csv'  # Your merged CSV file path
 df = pd.read_csv(dataset_path)
 
 # Print the dataset (first 5 rows)
